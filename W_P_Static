@@ -1,0 +1,13 @@
+def weather_forecast(air_temp,humidity_level,wind_speed):
+    weather_pred=(0.5*air_temp**2-0.2*humidity_level+0.1*wind_speed-15)
+    
+    if weather_pred<=100:
+      return "Strong"
+    elif weather_pred>300:
+      return "Sunny"
+    elif 200<weather_pred<=300:
+      return "Cloudy"
+    else:
+      return "Rainy"
+
+print("The weather prediction will be:",weather_forecast(28,65,20))
